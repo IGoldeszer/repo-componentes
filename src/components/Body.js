@@ -1,21 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Item from './Item'
 import './style/Body.css';
-import Card from './Card'
 
-function Body({children}) {
+function Body() {
+
+    const [info, setInfo] = useState()
+
+    useEffect(()=>{
+        fetch('data.json') // Trae el response completo
+        .then((resp) => resp.json()) // Extrae la información a utilizar del Response
+        .then((data) => setInfo(data)) // Setea esa info en nuestro State
+    }, [])
+
     return (
         <section className='cuerpo'>
-            <h2>Catálogo de productos</h2>
-            <p>Elegí tus productos de esta lista:</p>
+            <div>
+                <h2>Catálogo de productos</h2>
+                <p>Elegí alguno de nuestros productos de la lista:</p>
+            </div>
+            <div className='catalogo'>
+                {info && info.map(i => <Item product={i.nombre} price={i.precio} stock={i.stock}/>)}
+            </div>
         </section>
-
-        // // <section>
-        // //     {children}
-        // //     <Card product='Mesa' price='$1000' img=''/>
-        // //     <Card product='Silla' price='$200'/>
-        // //     <Card product='' price=''/>
-        // //     <Card product='' price=''/>
-        // // </section>
     );
 }
 

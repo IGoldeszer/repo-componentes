@@ -3,18 +3,21 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar'
 import Body from './components/Body';
-import Welcome from './components/Welcome';
-import Card from './components/Card';
+import ItemDetailContainer from './components/ItemDetailContainer';
+import Item from './components/Item';
 
 function App() {
   return (
-    <div>
+    <>      
       <Navbar />
-      <Welcome name=""/>
+      
+      <ItemDetailContainer />
+      
       <Body>
-        <Card props/>
+        <Item props/>
       </Body>
-    </div>
+    
+    </>
   );
 }
 

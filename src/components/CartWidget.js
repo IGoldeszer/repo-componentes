@@ -5,7 +5,7 @@ function CartWidget () {
     return (
         <div className="cart">
             <p>0</p>
-            <img className="cartSize" src="https://freeiconshop.com/wp-content/uploads/edd/cart-outline.png"/>
+            <img className="cartSize" src="https://freeiconshop.com/wp-content/uploads/edd/cart-outline.png" alt=""/>
         </div>
     );
 };

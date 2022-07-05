@@ -1,5 +1,11 @@
 .cuerpo{
-    height: 300px;
+    background-color: white;
+    align-items: center;
+    text-align: center;
+}
+
+.catalogo{
+    height: 500px;
     background-color: aqua;
     display: flex;
     flex-direction: row;

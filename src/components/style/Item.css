@@ -1,0 +1,16 @@
+.card{
+    height: 400px;
+    width: 250px;
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+}
+
+.titulo{
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.Comprar{
+    font-weight: bold;
+}
